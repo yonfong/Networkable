@@ -1,0 +1,33 @@
+{
+  "name": "Networkable",
+  "version": "0.1.0",
+  "summary": "A short description of Networkable.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/yonfong/Networkable",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yonfong": "yongfongzhang@163.com"
+  },
+  "source": {
+    "git": "https://github.com/yonfong/Networkable.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "12.0"
+  },
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "Networkable/Classes/Core",
+      "dependencies": {
+        "Moya": [
+
+        ]
+      }
+    }
+  ]
+}

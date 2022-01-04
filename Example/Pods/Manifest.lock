@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Kingfisher (7.1.2)
+  - Moya (15.0.0):
+    - Moya/Core (= 15.0.0)
+  - Moya/Core (15.0.0):
+    - Alamofire (~> 5.0)
+  - Networkable (0.1.0):
+    - Networkable/Core (= 0.1.0)
+  - Networkable/Core (0.1.0):
+    - Moya
+
+DEPENDENCIES:
+  - Kingfisher
+  - Networkable (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Moya
+
+EXTERNAL SOURCES:
+  Networkable:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
+  Networkable: 7a24ca5c73eb3f31c975590130fa9f75d9b01b64
+
+PODFILE CHECKSUM: f63a60a2a673e7c877d5c1835c2ce78f7a80ec39
+
+COCOAPODS: 1.11.2
