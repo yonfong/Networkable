@@ -1,24 +1,37 @@
 PODS:
   - Alamofire (5.5.0)
+  - Cache (6.0.0)
   - Kingfisher (7.1.2)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
   - Moya/Core (15.0.0):
     - Alamofire (~> 5.0)
+  - MoyaCache (0.3.1):
+    - Moya
+    - Storable
   - Networkable (0.1.0):
     - Networkable/Core (= 0.1.0)
   - Networkable/Core (0.1.0):
     - Moya
+  - Networkable/ResponseCache (0.1.0):
+    - MoyaCache
+    - Networkable/Core
+  - Storable (0.1.1)
 
 DEPENDENCIES:
+  - Cache
   - Kingfisher
   - Networkable (from `../`)
+  - Networkable/ResponseCache (from `../`)
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cache
     - Kingfisher
     - Moya
+    - MoyaCache
+    - Storable
 
 EXTERNAL SOURCES:
   Networkable:
@@ -26,10 +39,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
-  Networkable: 7a24ca5c73eb3f31c975590130fa9f75d9b01b64
+  MoyaCache: ddb708ce24402c395cf0a812173525cb35a50100
+  Networkable: bfd52077871244eb8381f7546f141e7078ce8be6
+  Storable: 31d19a4f897d68d1f1843604b60e12e5c2e1db5f
 
-PODFILE CHECKSUM: f63a60a2a673e7c877d5c1835c2ce78f7a80ec39
+PODFILE CHECKSUM: f005ca714418ad5a05fedd86019ee7a183420621
 
 COCOAPODS: 1.11.2

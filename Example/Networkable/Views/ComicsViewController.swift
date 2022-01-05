@@ -71,15 +71,32 @@ class ComicsViewController: UIViewController {
     state = .loading
       
     /// Networkbale 使用
-    Marvel.comics.request(modeType: MarvelResponse<Comic>.self) {[weak self] result in
-        guard let self = self else { return }
-        switch result{
-        case let .success(marvelResponse):
-            self.state = .ready(marvelResponse.data.results)
-        case .failure(_):
-            self.state = .error
-        }
-    }
+
+      let target = Marvel.comics
+      if let cachedResponse = try? target.cachedResponse(),let formatedResonse = try? cachedResponse.map(MarvelResponse<Comic>.self) {
+          self.state = .ready(formatedResonse.data.results)
+      } else {
+           Marvel.cacheProvider.request(.comics, modeType: MarvelResponse<Comic>.self) {[weak self] result in
+                guard let self = self else { return }
+                switch result{
+                case let .success(marvelResponse):
+                    self.state = .ready(marvelResponse.data.results)
+                case .failure(_):
+                    self.state = .error
+                }
+            }
+      }
+      
+      
+//    Marvel.comics.cache.request(modeType: MarvelResponse<Comic>.self) {[weak self] result in
+//        guard let self = self else { return }
+//        switch result{
+//        case let .success(marvelResponse):
+//            self.state = .ready(marvelResponse.data.results)
+//        case .failure(_):
+//            self.state = .error
+//        }
+//    }
       
 //    provider.request(.comics) { [weak self] result in
 //      guard case self = self else { return }

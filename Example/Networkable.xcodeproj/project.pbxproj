@@ -19,6 +19,7 @@
 		3389DD4B27840E8C00F0D32A /* imgur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389DD3827840E8C00F0D32A /* imgur.swift */; };
 		3389DD4C27840E8C00F0D32A /* Marvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389DD3927840E8C00F0D32A /* Marvel.swift */; };
 		3389DD4D27840E8C00F0D32A /* CodableResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3389DD3A27840E8C00F0D32A /* CodableResponses.swift */; };
+		33C6C45A2785D2BE002AA0DA /* Storable+Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C6C4592785D2BE002AA0DA /* Storable+Cache.swift */; };
 		39A5254AC234D62C2016F3BF /* Pods_Networkable_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50E44E81717C9F2398963885 /* Pods_Networkable_Example.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		3389DD3827840E8C00F0D32A /* imgur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imgur.swift; sourceTree = "<group>"; };
 		3389DD3927840E8C00F0D32A /* Marvel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Marvel.swift; sourceTree = "<group>"; };
 		3389DD3A27840E8C00F0D32A /* CodableResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableResponses.swift; sourceTree = "<group>"; };
+		33C6C4592785D2BE002AA0DA /* Storable+Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storable+Cache.swift"; sourceTree = "<group>"; };
 		50E44E81717C9F2398963885 /* Pods_Networkable_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networkable_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E57DF783C94FF1FC0309853 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Networkable_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networkable_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 				3389DD3727840E8C00F0D32A /* Network */,
 				3389DD2B27840E8C00F0D32A /* Views */,
 				3389DD1D278406B300F0D32A /* ResponseData.swift */,
+				33C6C4592785D2BE002AA0DA /* Storable+Cache.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -266,16 +269,22 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Networkable_Example/Pods-Networkable_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Cache/Cache.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/MoyaCache/MoyaCache.framework",
 				"${BUILT_PRODUCTS_DIR}/Networkable/Networkable.framework",
+				"${BUILT_PRODUCTS_DIR}/Storable/Storable.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MoyaCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Networkable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Storable.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -325,6 +334,7 @@
 				3389DD4D27840E8C00F0D32A /* CodableResponses.swift in Sources */,
 				3389DD4B27840E8C00F0D32A /* imgur.swift in Sources */,
 				3389DD4327840E8C00F0D32A /* ComicCell.swift in Sources */,
+				33C6C45A2785D2BE002AA0DA /* Storable+Cache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

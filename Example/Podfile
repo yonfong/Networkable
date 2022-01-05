@@ -4,5 +4,9 @@ platform :ios, '12.0'
 
 target 'Networkable_Example' do
   pod 'Networkable', :path => '../'
+  pod 'Networkable/ResponseCache', :path => '../'
+  
   pod 'Kingfisher'
+  pod 'Cache'
+  
 end

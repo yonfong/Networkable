@@ -1,6 +1,8 @@
 import Foundation
 import Moya
 import Networkable
+import MoyaCache
+import Storable
 
 public enum Marvel{
   static private let publicKey = "b37b1ebf30b3e2e827d82411fa48c7a9"
@@ -94,5 +96,11 @@ extension Marvel: Networkable {
 //            return MoyaProvider<Target>(endpointClosure: myEndpointClosure, requestClosure: myRequestClosure, plugins: [NetworkLoggerPlugin(configuration: .init(logOptions: .verbose))], trackInflights: false)
 //        }
 //    }
+}
+
+extension Marvel: Cacheable {
+    public var expiry: Expiry {
+        return .never
+    }
 }
 

@@ -26,4 +26,10 @@ Pod::Spec.new do |s|
         ss.dependency 'Moya'
   end
   
+  s.subspec 'ResponseCache' do |ss|
+        ss.source_files = 'Networkable/Classes/ResponseCache'
+        ss.dependency 'Networkable/Core'
+        ss.dependency 'MoyaCache'
+  end
+  
 end
